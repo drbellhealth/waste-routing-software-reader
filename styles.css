@@ -1,0 +1,63 @@
+/* MSP / B2B variant — cooler, slightly more corporate palette than the chiro local template */
+:root {
+  --ink: #1a2333;
+  --muted: #5a6577;
+  --link: #1c5fb0;
+  --accent: #1c4f87;
+  --bg: #ffffff;
+  --soft: #f3f6fb;
+  --line: #dde3ec;
+  --max: 760px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+header.site {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  background: var(--bg);
+  position: sticky; top: 0; z-index: 10;
+}
+header.site .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+header.site .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 18px; }
+header.site nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 15px; }
+header.site nav a:hover { color: var(--ink); }
+nav.crumbs { font-size: 14px; color: var(--muted); margin: 16px 0 8px; }
+nav.crumbs a { color: var(--muted); text-decoration: none; }
+nav.crumbs a:hover { text-decoration: underline; }
+main { padding: 8px 0 48px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 12px 0 8px; }
+h2 { font-size: 22px; line-height: 1.3; margin: 30px 0 8px; }
+h3 { font-size: 18px; line-height: 1.35; margin: 22px 0 6px; }
+p, ul, ol { margin: 12px 0; }
+ul, ol { padding-left: 24px; }
+a { color: var(--link); }
+.lede { font-size: 19px; color: var(--muted); margin-top: 4px; }
+.callout { background: var(--soft); border-left: 4px solid var(--accent); padding: 14px 18px; margin: 22px 0; border-radius: 6px; }
+.callout strong { color: var(--accent); }
+table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 15px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--soft); font-weight: 600; width: 32%; }
+.faq details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 16px; padding: 4px 0; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:after { content: "+"; float: right; color: var(--muted); }
+.faq details[open] summary:after { content: "\2013"; }
+.faq details[open] summary { color: var(--accent); }
+.map { margin: 16px 0 4px; }
+footer.site { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; margin-top: 32px; }
+footer.site a { color: var(--muted); }
+.disclaimer { font-size: 13px; color: var(--muted); margin-top: 32px; padding-top: 16px; border-top: 1px dashed var(--line); }
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  h1 { font-size: 26px; }
+  header.site nav a { margin-left: 10px; font-size: 14px; }
+  th { width: 38%; }
+}
